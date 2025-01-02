@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page Design</title>
+    
+    <!-- Link to the external stylesheet for styling the product page -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main container wrapping all elements on the product page -->
+    <div class="container">
+
+        <!-- Product section, containing both the gallery and details -->
+        <div class="product">
+
+            <!-- Image gallery for displaying product images and controls for switching images -->
+            <div class="gallery">
+
+                <!-- Primary product image that can change based on selected controls -->
+                <img src="product-img/image1.png" id="productImg" alt="Product Image">
+
+                <!-- Controls for switching between images (using spans as buttons) -->
+                <div class="controls">
+                    <span class="btn active"></span> <!-- Active button representing the current image -->
+                    <span class="btn"></span>
+                    <span class="btn"></span>
+                </div>
+
+            </div>
+
+            <!-- Product details section with title, price, and other info -->
+            <div class="details">
+
+                <!-- Product title and price information -->
+                <h1>Casual T Shirt</h1>
+                <h2>$15.00</h2>
+                <h3>30% OFF</h3>
+                <p>
+                    Wrangler is an American manufacturer of jeans and other clothing items, 
+                    particularly workwear.
+                </p>
+                
+                <!-- Product customization form (size, color, quantity) and purchase button -->
+                <form>
+
+                    <!-- Size selection options using radio buttons -->
+                    <div class="size-select">
+                        <p>Size</p>
+                        <label for="small">
+                            <input type="radio" name="size" id="small">
+                            <span>S</span>
+                        </label>
+                        <label for="medium">
+                            <input type="radio" name="size" id="medium">
+                            <span>M</span>
+                        </label>
+                        <label for="large">
+                            <input type="radio" name="size" id="large">
+                            <span>L</span>
+                        </label>
+                        <label for="x-large">
+                            <input type="radio" name="size" id="x-large">
+                            <span>XL</span>
+                        </label>
+                        <label for="xx-large">
+                            <input type="radio" name="size" id="xx-large">
+                            <span>XXL</span>
+                        </label>
+                    </div>
+
+                    <!-- Color selection options with colored spans for visual cues -->
+                    <div class="color-select">
+                        <p>Color</p>
+                        <label for="red">
+                            <input type="radio" name="color" id="red">
+                            <span class="color-1"></span> <!-- Color swatch for red -->
+                        </label>
+                        <label for="green">
+                            <input type="radio" name="color" id="green">
+                            <span class="color-2"></span> <!-- Color swatch for green -->
+                        </label>
+                        <label for="blue">
+                            <input type="radio" name="color" id="blue">
+                            <span class="color-3"></span> <!-- Color swatch for blue -->
+                        </label>
+                        <label for="pink">
+                            <input type="radio" name="color" id="pink">
+                            <span class="color-4"></span> <!-- Color swatch for pink -->
+                        </label>
+                    </div>
+
+                    <!-- Quantity selector allowing users to specify the desired quantity -->
+                    <div class="quantity-select">
+                        <p>Quantity</p>
+                        <input type="number" value="1" min="1"> <!-- Initial value set to 1 -->
+                    </div>
+
+                    <!-- Buy Now button to submit the form for purchasing the product -->
+                    <button type="submit">Buy Now</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- External JavaScript file for handling dynamic interactions -->
+    <script src="script.js"></script>
+</body>
+</html>

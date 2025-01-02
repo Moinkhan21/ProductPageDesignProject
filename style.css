@@ -1,0 +1,201 @@
+/* Reset default margin, padding, and box-sizing for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Main container settings for full viewport height, centered content, and background color */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #d0eaff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Product section: a flex container for the gallery and details sections */
+.product {
+    width: 90%;
+    max-width: 750px;
+    display: flex;
+}
+
+/* Gallery section styling with background, scaling, shadow, and relative positioning */
+.gallery {
+    flex-basis: 47%;
+    background-color: #241e20;
+    transform: scale(1.08);
+    box-shadow: -10px 5px 10px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Styling for the main product image to take full width of the gallery container */
+.gallery img {
+    width: 100%;
+    display: block;
+    padding-top: 100px;
+}
+
+/* Details section: styles for background, padding, shadow, and font settings */
+.details {
+    flex-basis: 53%;
+    background-color: #fff;
+    padding: 40px;
+    padding-left: 60px;
+    box-shadow: -10px 5px 10px 10px rgba(0, 0, 0, 0.1);
+    font-size: 13px;
+    font-weight: 500;
+    color: #777;
+}
+
+/* Product title styling with larger font size and darker color */
+.details h1 {
+    color: #333;
+    font-size: 35px;
+}
+
+/* Product price styling with emphasized font size and color */
+.details h2 {
+    color: #555;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/* Discount label styling in green color with extra margin below */
+.details h3 {
+    color: #00d874;
+    margin-bottom: 20px;
+}
+
+/* Form styling with adjusted font size for labels */
+.details form {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/* Size selection container with horizontal layout and margin for spacing */
+.size-select {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* Label width for the size selection text */
+.size-select p {
+    width: 70px;
+}
+
+/* Checked input styling for selected size, changing color and font weight */
+.size-select input:checked + span {
+    color: blue;
+    font-weight: 600;
+}
+
+/* Hide radio inputs for custom styling */
+.size-select input {
+    display: none;
+}
+
+/* Size option styling for padding, spacing, and cursor pointer */
+.size-select span {
+    padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Color selection container with spacing and alignment */
+.color-select {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Label width for color selection text */
+.color-select p {
+    width: 75px;
+}
+
+/* Style for color option circles */
+.color-select span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+/* Specific colors for each option in the color selection */
+.color-1 { background-color: red; }
+.color-2 { background-color: #00d874; }
+.color-3 { background-color: blue; }
+.color-4 { background-color: pink; }
+
+/* Hide color input elements for custom styling */
+.color-select input {
+    display: none;
+}
+
+/* Checked input styling for selected color, changing size and adding shadow */
+.color-select input:checked + span {
+    transform: scale(0.7);
+    box-shadow: 0 0 0 4px #fff, 0 0 0 6px #000;
+}
+
+/* Quantity selector styling with alignment and margin */
+.quantity-select {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Quantity input styling with background, padding, and rounded corners */
+.quantity-select input {
+    background-color: #eee;
+    border: 0;
+    outline: 0;
+    padding: 2px 2px 2px 15px;
+    width: 50px;
+    border-radius: 12px;
+}
+
+/* Buy button styling for form submission */
+form button {
+    background-color: #553ff0;
+    color: #fff;
+    font-size: 17px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 30px;
+    border: 0;
+    outline: 0;
+    margin-top: 50px;
+    box-shadow: 0 10px 10px rgba(85, 63, 240, 0.25);
+    cursor: pointer;
+}
+
+/* Position and styling for image gallery control buttons */
+.controls {
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+}
+
+/* Style for each control button with circular shape and semi-transparent background */
+.btn {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* Active state styling for the currently selected control button */
+.btn.active {
+    background-color: #00d874;
+}
